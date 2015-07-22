@@ -25,13 +25,13 @@ import java.util.Set;
  */
 public class DockerModule extends BaseSEDLModule{
 
-   private static final Set<String> moduleNames=Sets.newHashSet("MV-Docker","Docker");
+   private static final Set<String> moduleNames=Sets.newHashSet("VM-Docker","Docker");
    private static final List<Class<? extends Experiment>> applicableExperimentTypes=Lists.newArrayList();
 
     public DockerModule() {
         super(moduleNames, applicableExperimentTypes);       
-       this.getMarshallers().put(SerializationFormat.SEDL4People, new DockerModuleMarshaller());
-       this.getUnmarshallers().put(SerializationFormat.SEDL4People, new DockerModuleUnmarshaller());
+        this.getMarshallers().put(SerializationFormat.SEDL4People, new DockerModuleMarshaller());
+        this.getUnmarshallers().put(SerializationFormat.SEDL4People, new DockerModuleUnmarshaller());
     }
    
    
